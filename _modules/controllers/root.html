@@ -241,11 +241,11 @@
 		<span class="k">try</span><span class="p">:</span>
 			<span class="kn">from</span> <span class="nn">Plugins.Extensions.OpenWebif.controllers.NET</span> <span class="kn">import</span> <span class="n">NetController</span>
 			<span class="bp">self</span><span class="o">.</span><span class="n">putChild2</span><span class="p">(</span><span class="s2">&quot;net&quot;</span><span class="p">,</span> <span class="n">NetController</span><span class="p">(</span><span class="n">session</span><span class="p">))</span>
-		<span class="k">except</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">pass</span>
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">harddiskmanager</span><span class="o">.</span><span class="n">on_partition_list_change</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">onPartitionChange</span><span class="p">)</span>
-		<span class="k">except</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">pass</span>
 
 <span class="c1"># TODO : test !!</span>

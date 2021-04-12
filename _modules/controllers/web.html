@@ -269,7 +269,7 @@
 		<span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">InfoBar</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">startTimeshift</span><span class="p">()</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="n">success</span> <span class="o">=</span> <span class="kc">False</span>
 		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">P_tstate</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">success</span><span class="p">)</span></div>
 
@@ -299,7 +299,7 @@
 				<span class="n">comp_config</span><span class="o">.</span><span class="n">usage</span><span class="o">.</span><span class="n">check_timeshift</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
 				<span class="n">comp_config</span><span class="o">.</span><span class="n">usage</span><span class="o">.</span><span class="n">check_timeshift</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 			<span class="n">InfoBar</span><span class="o">.</span><span class="n">instance</span><span class="o">.</span><span class="n">stopTimeshift</span><span class="p">()</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="n">success</span> <span class="o">=</span> <span class="kc">False</span>
 		<span class="k">if</span> <span class="n">comp_config</span><span class="o">.</span><span class="n">usage</span><span class="o">.</span><span class="n">check_timeshift</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
 			<span class="n">comp_config</span><span class="o">.</span><span class="n">usage</span><span class="o">.</span><span class="n">check_timeshift</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">oldcheck</span>
@@ -395,7 +395,7 @@
 		<span class="k">elif</span> <span class="nb">set</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;set&quot;</span><span class="p">:</span>
 			<span class="k">try</span><span class="p">:</span>
 				<span class="k">return</span> <span class="n">setVolume</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">set</span><span class="p">[</span><span class="mi">3</span><span class="p">:]))</span>
-			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="n">res</span> <span class="o">=</span> <span class="n">getVolumeStatus</span><span class="p">()</span>
 				<span class="n">res</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 				<span class="n">res</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Wrong parameter format &#39;set=</span><span class="si">%s</span><span class="s2">&#39;. Use set=set15 &quot;</span><span class="p">)</span> <span class="o">%</span> <span class="nb">set</span>
@@ -440,7 +440,7 @@
 <span class="sd">		&quot;&quot;&quot;</span>
 		<span class="k">try</span><span class="p">:</span>
 			<span class="nb">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;id&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="nb">id</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
 		<span class="k">return</span> <span class="n">setAudioTrack</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span></div>
@@ -493,7 +493,7 @@
 		<span class="nb">id</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 		<span class="k">try</span><span class="p">:</span>
 			<span class="nb">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;command&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">return</span> <span class="p">{</span>
 				<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 				<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;The parameter &#39;command&#39; must be a number&quot;</span><span class="p">)</span>
@@ -548,7 +548,7 @@
 				<span class="k">return</span> <span class="kc">True</span>
 			<span class="k">else</span><span class="p">:</span>
 				<span class="k">return</span> <span class="kc">False</span>
-		<span class="k">except</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">return</span> <span class="kc">False</span></div>
 
 <div class="viewcode-block" id="WebController.P_set_powerup_without_waking_tv"><a class="viewcode-back" href="../../controller.html#controllers.web.WebController.P_set_powerup_without_waking_tv">[docs]</a>	<span class="k">def</span> <span class="nf">P_set_powerup_without_waking_tv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
@@ -572,7 +572,7 @@
 				<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
 				<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 				<span class="k">return</span> <span class="kc">True</span>
-			<span class="k">except</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+			<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="k">return</span> <span class="kc">False</span>
 		<span class="k">else</span><span class="p">:</span>
 			<span class="k">return</span> <span class="kc">False</span></div>
@@ -1209,7 +1209,7 @@
 		<span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 			<span class="k">try</span><span class="p">:</span>
 				<span class="n">eventid</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;eventid&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="k">return</span> <span class="p">{</span>
 					<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 					<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The parameter &#39;eventid&#39; must be a number&quot;</span>
@@ -1252,7 +1252,7 @@
 		<span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
 			<span class="k">try</span><span class="p">:</span>
 				<span class="n">beginOld</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;beginOld&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="k">return</span> <span class="p">{</span>
 					<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 					<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The parameter &#39;beginOld&#39; must be a number&quot;</span>
@@ -1260,7 +1260,7 @@
 
 			<span class="k">try</span><span class="p">:</span>
 				<span class="n">endOld</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;endOld&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="k">return</span> <span class="p">{</span>
 					<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 					<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The parameter &#39;endOld&#39; must be a number&quot;</span>
@@ -1414,7 +1414,7 @@
 			<span class="k">return</span> <span class="n">res</span>
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">begin</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;begin&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">return</span> <span class="p">{</span>
 				<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 				<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The parameter &#39;begin&#39; must be a number&quot;</span>
@@ -1422,7 +1422,7 @@
 
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;end&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">return</span> <span class="p">{</span>
 				<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 				<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The parameter &#39;end&#39; must be a number&quot;</span>
@@ -1450,7 +1450,7 @@
 
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">begin</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;begin&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">return</span> <span class="p">{</span>
 				<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 				<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The parameter &#39;begin&#39; must be a number&quot;</span>
@@ -1458,7 +1458,7 @@
 
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;end&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">return</span> <span class="p">{</span>
 				<span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
 				<span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;The parameter &#39;end&#39; must be a number&quot;</span>
@@ -1466,7 +1466,7 @@
 
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">eit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="sa">b</span><span class="s2">&quot;eit&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+		<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="n">eit</span> <span class="o">=</span> <span class="kc">None</span>
 
 		<span class="k">return</span> <span class="n">removeTimer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">,</span> <span class="n">getUrlArg</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;sRef&quot;</span><span class="p">),</span> <span class="n">begin</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">eit</span><span class="p">)</span></div>
@@ -1860,7 +1860,7 @@
 					<span class="n">mnow</span><span class="p">[</span><span class="s2">&quot;duration_sec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie</span><span class="o">.</span><span class="n">getDuration</span><span class="p">()</span>
 					<span class="n">mnow</span><span class="p">[</span><span class="s2">&quot;remaining&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie</span><span class="o">.</span><span class="n">getDuration</span><span class="p">()</span>
 					<span class="n">mnow</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">movie</span><span class="o">.</span><span class="n">getEventId</span><span class="p">()</span>
-			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># noqa: E722</span>
+			<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="n">mnow</span> <span class="o">=</span> <span class="n">now</span>
 		<span class="k">elif</span> <span class="n">mnow</span><span class="p">[</span><span class="s2">&quot;sref&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
 			<span class="n">serviceref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">nav</span><span class="o">.</span><span class="n">getCurrentlyPlayingServiceReference</span><span class="p">()</span>

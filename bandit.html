@@ -81,7 +81,7 @@ pre {
             Metrics:<br>
         </div>
         Total lines of code: <span id="loc">43159</span><br>
-        Total lines skipped (#nosec): <span id="nosec">37</span>
+        Total lines skipped (#nosec): <span id="nosec">84</span>
     </div>
 </div>
 
@@ -449,132 +449,6 @@ pre {
 </div>
 
 <div id="issue-17">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-247						length_minutes = info.getLength(serviceref)
-248					except:  # noqa: E722
-249						pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-18">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-282								sz = "%.2f %s" % ((size / 1024.), _("kB"))
-283						except:  # noqa: E722
-284							pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-19">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-378				length_minutes = info.getLength(serviceref)
-379			except:  # noqa: E722
-380				pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-20">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-412						sz = "%.2f %s" % ((size / 1024.), _("kB"))
-413				except:  # noqa: E722
-414					pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-21">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-801				length_minutes = info.getLength(serviceref)
-802			except:  # noqa: E722
-803				pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-22">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/movies.py" target="_blank">plugin/controllers/models/movies.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-832					sz = "%.2f %s" % ((size / 1024.), _("kB"))
-833			except:  # noqa: E722
-834				pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-23">
 <div class="issue-block issue-sev-medium">
     <b>blacklist: </b> Use of insecure MD2, MD4, MD5, or SHA1 hash function.<br>
     <b>Test ID:</b> B303<br>
@@ -595,28 +469,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-24">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/services.py" target="_blank">plugin/controllers/models/services.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-144					bqref = ServiceReference(epg_bouquet).ref.toString()
-145			except:  # noqa: E722
-146				pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-25">
+<div id="issue-18">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -637,7 +490,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-26">
+<div id="issue-19">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -658,7 +511,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-27">
+<div id="issue-20">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -679,7 +532,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-28">
+<div id="issue-21">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -700,91 +553,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-29">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/root.py" target="_blank">plugin/controllers/root.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-84				self.putChild2("net", NetController(session))
-85			except:  # noqa: E722
-86				pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-30">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/root.py" target="_blank">plugin/controllers/root.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-88				harddiskmanager.on_partition_list_change.append(self.onPartitionChange)
-89			except:  # noqa: E722
-90				pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-31">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/transcoding.py" target="_blank">plugin/controllers/transcoding.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-38						encoder_features[feature] = getattr(config.plugins.transcodingsetup, feature)
-39					except:  # noqa: E722
-40						pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-32">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/transcoding.py" target="_blank">plugin/controllers/transcoding.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-44						encoder_features[feature] = getattr(config.plugins.transcodingsetup, "%s_%s" % (feature, encoder))
-45					except:  # noqa: E722
-46						pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-33">
+<div id="issue-22">
 <div class="issue-block issue-sev-medium">
     <b>hardcoded_bind_all_interfaces: </b> Possible binding to all interfaces.<br>
     <b>Test ID:</b> B104<br>
@@ -805,7 +574,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-34">
+<div id="issue-23">
 <div class="issue-block issue-sev-medium">
     <b>hardcoded_bind_all_interfaces: </b> Possible binding to all interfaces.<br>
     <b>Test ID:</b> B104<br>
@@ -826,7 +595,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-35">
+<div id="issue-24">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -847,7 +616,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-36">
+<div id="issue-25">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -868,7 +637,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-37">
+<div id="issue-26">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>

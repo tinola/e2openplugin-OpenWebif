@@ -1,26 +1,7 @@
-plugin/vtiaddon.py:5:1: F401 'Components.ConfigList.ConfigListScreen' imported but unused
-plugin/vtiaddon.py:6:1: F401 'Components.config.ConfigText' imported but unused
-plugin/vtiaddon.py:6:1: F401 'Components.config.ConfigInteger' imported but unused
-plugin/vtiaddon.py:6:1: F401 'Components.config.getConfigListEntry' imported but unused
-plugin/vtiaddon.py:6:1: F401 'Components.config.ConfigSubsection' imported but unused
-plugin/httpserver.py:33:1: F401 'twisted.internet.protocol.Protocol' imported but unused
-plugin/httpserver.py:33:1: F401 'twisted.internet.protocol.Factory' imported but unused
-plugin/httpserver.py:165:25: F841 local variable 'e' is assigned to but never used
-plugin/httpserver.py:231:5: E722 do not use bare 'except'
-plugin/httpserver.py:248:7: E123 closing bracket does not match indentation of opening bracket's line
-plugin/httpserver.py:264:4: E722 do not use bare 'except'
-plugin/httpserver.py:308:3: F841 local variable 'host' is assigned to but never used
-plugin/httpserver.py:375:4: E722 do not use bare 'except'
-plugin/httpserver.py:375:11: E261 at least two spaces before inline comment
-plugin/httpserver.py:384:4: E722 do not use bare 'except'
-plugin/httpserver.py:384:11: E261 at least two spaces before inline comment
-plugin/httpserver.py:424:3: E722 do not use bare 'except'
-plugin/httpserver.py:430:5: E722 do not use bare 'except'
-plugin/httpserver.py:480:20: F841 local variable 'e' is assigned to but never used
-plugin/httpserver.py:494:2: E722 do not use bare 'except'
-plugin/httpserver.py:494:9: E261 at least two spaces before inline comment
-plugin/httpserver.py:499:2: E722 do not use bare 'except'
-plugin/httpserver.py:499:9: E261 at least two spaces before inline comment
+plugin/httpserver.py:164:25: F841 local variable 'e' is assigned to but never used
+plugin/httpserver.py:247:7: E123 closing bracket does not match indentation of opening bracket's line
+plugin/httpserver.py:307:3: F841 local variable 'host' is assigned to but never used
+plugin/httpserver.py:479:20: F841 local variable 'e' is assigned to but never used
 plugin/plugin.py:102:1: E402 module level import not at top of file
 plugin/plugin.py:202:6: E714 test for object identity should be 'is not'
 plugin/plugin.py:206:6: E714 test for object identity should be 'is not'
@@ -33,16 +14,12 @@ plugin/controllers/transcoding.py:134:2: E301 expected 1 blank line, found 0
 plugin/controllers/utilities.py:14:8: E126 continuation line over-indented for hanging indent
 plugin/controllers/utilities.py:328:24: E261 at least two spaces before inline comment
 plugin/controllers/utilities.py:332:19: E261 at least two spaces before inline comment
-plugin/controllers/BQE.py:23:1: F401 'twisted.web.server' imported but unused
-plugin/controllers/BQE.py:24:1: F401 'enigma.iServiceInformation' imported but unused
 plugin/controllers/BQE.py:298:6: E722 do not use bare 'except'
 plugin/controllers/base.py:209:6: E117 over-indented (comment)
 plugin/controllers/base.py:213:6: E117 over-indented (comment)
 plugin/controllers/base.py:228:6: E117 over-indented (comment)
 plugin/controllers/base.py:395:20: E712 comparison to True should be 'if cond is True:' or 'if cond:'
-plugin/controllers/ajax.py:27:1: F401 'six' imported but unused
-plugin/controllers/ajax.py:31:1: F811 redefinition of unused 'getInfo' from line 29
-plugin/controllers/ajax.py:111:35: F841 local variable 'extEventInfoProvider' is assigned to but never used
+plugin/controllers/ajax.py:109:35: F841 local variable 'extEventInfoProvider' is assigned to but never used
 plugin/controllers/file.py:69:21: W605 invalid escape sequence '\:'
 plugin/controllers/file.py:69:24: W605 invalid escape sequence '\d'
 plugin/controllers/BouquetEditor.py:15:47: E262 inline comment should start with '# '
@@ -55,12 +32,10 @@ plugin/controllers/defaults.py:115:2: F841 local variable 'PICON_PATH' is assign
 plugin/controllers/root.py:42:1: F401 'Plugins.Extensions.OpenWebif.controllers.defaults.setMobile' imported but unused
 plugin/controllers/AT.py:89:4: F841 local variable 'lines' is assigned to but never used
 plugin/controllers/AT.py:173:25: F841 local variable 'e' is assigned to but never used
-plugin/controllers/rest.py:6:1: F401 'twisted.web.http' imported but unused
 plugin/controllers/NET.py:199:34: W605 invalid escape sequence '\W'
 plugin/controllers/web.py:58:18: W605 invalid escape sequence '\:'
 plugin/controllers/web.py:58:21: W605 invalid escape sequence '\d'
 plugin/controllers/web.py:2363:1: E402 module level import not at top of file
-plugin/controllers/wol.py:26:1: F401 'Plugins.Extensions.OpenWebif.controllers.utilities.PY3' imported but unused
 plugin/controllers/models/info.py:27:1: F401 'sys' imported but unused
 plugin/controllers/models/info.py:111:4: E722 do not use bare 'except'
 plugin/controllers/models/info.py:443:30: W605 invalid escape sequence '\ '

@@ -189,7 +189,6 @@
 <span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">reactor</span><span class="p">,</span> <span class="n">ssl</span>
 <span class="kn">from</span> <span class="nn">twisted.web</span> <span class="kn">import</span> <span class="n">server</span><span class="p">,</span> <span class="n">http</span><span class="p">,</span> <span class="n">resource</span>
 <span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="kn">import</span> <span class="n">CannotListenError</span>
-<span class="kn">from</span> <span class="nn">twisted.internet.protocol</span> <span class="kn">import</span> <span class="n">Factory</span><span class="p">,</span> <span class="n">Protocol</span>
 
 <span class="kn">from</span> <span class="nn">Plugins.Extensions.OpenWebif.controllers.root</span> <span class="kn">import</span> <span class="n">RootController</span>
 <span class="kn">from</span> <span class="nn">Plugins.Extensions.OpenWebif.sslcertificate</span> <span class="kn">import</span> <span class="n">SSLCertificateGenerator</span><span class="p">,</span> <span class="n">KEY_FILE</span><span class="p">,</span> <span class="n">CERT_FILE</span><span class="p">,</span> <span class="n">CA_FILE</span><span class="p">,</span> <span class="n">CHAIN_FILE</span>
@@ -387,7 +386,7 @@
 						<span class="n">chain</span> <span class="o">=</span> <span class="p">[</span><span class="n">crypto</span><span class="o">.</span><span class="n">load_certificate</span><span class="p">(</span><span class="n">crypto</span><span class="o">.</span><span class="n">FILETYPE_PEM</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">CHAIN_FILE</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())]</span>
 						<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[OpenWebif] ssl chain file found - loading&quot;</span><span class="p">)</span>
 					<span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">CertificateOptions</span><span class="p">(</span><span class="n">privateKey</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">certificate</span><span class="o">=</span><span class="n">cert</span><span class="p">,</span> <span class="n">extraCertChain</span><span class="o">=</span><span class="n">chain</span><span class="p">)</span>
-				<span class="k">except</span><span class="p">:</span>
+				<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 					<span class="c1"># THIS EXCEPTION IS ONLY CATCHED WHEN CERT FILES ARE BAD (look below for error)</span>
 					<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[OpenWebif] failed to get valid cert files. (It could occure bad file save or format, removing...)&quot;</span><span class="p">)</span>
 					<span class="c1"># removing bad files</span>
@@ -420,7 +419,7 @@
 				<span class="n">BJregisterService</span><span class="p">(</span><span class="s1">&#39;https&#39;</span><span class="p">,</span> <span class="n">httpsPort</span><span class="p">)</span>
 			<span class="k">except</span> <span class="n">CannotListenError</span><span class="p">:</span>
 				<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[OpenWebif] failed to listen on Port&quot;</span><span class="p">,</span> <span class="n">httpsPort</span><span class="p">)</span>
-			<span class="k">except</span><span class="p">:</span>
+			<span class="k">except</span><span class="p">:</span>   <span class="c1"># nosec # noqa: E722</span>
 				<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[OpenWebif] failed to start https, disabling...&quot;</span><span class="p">)</span>
 				<span class="c1"># Disable https</span>
 				<span class="n">config</span><span class="o">.</span><span class="n">OpenWebif</span><span class="o">.</span><span class="n">https_enabled</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">False</span>
@@ -531,7 +530,7 @@
 					<span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getSession</span><span class="p">()</span><span class="o">.</span><span class="n">sessionNamespaces</span>
 					<span class="n">session</span><span class="p">[</span><span class="s2">&quot;logged&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 					<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">getChildWithDefault</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span>
-			<span class="k">except</span><span class="p">:</span> <span class="c1"># nosec</span>
+			<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="k">pass</span>
 
 			<span class="k">try</span><span class="p">:</span>
@@ -540,7 +539,7 @@
 					<span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">getSession</span><span class="p">()</span><span class="o">.</span><span class="n">sessionNamespaces</span>
 					<span class="n">session</span><span class="p">[</span><span class="s2">&quot;logged&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 					<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">getChildWithDefault</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span>
-			<span class="k">except</span><span class="p">:</span> <span class="c1"># nosec</span>
+			<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 				<span class="k">pass</span>
 
 		<span class="c1"># If we get to here, no exception applied</span>
@@ -580,13 +579,13 @@
 		<span class="n">cpass</span> <span class="o">=</span> <span class="kc">None</span>
 		<span class="k">try</span><span class="p">:</span>
 			<span class="n">cpass</span> <span class="o">=</span> <span class="n">getpwnam</span><span class="p">(</span><span class="n">user</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-		<span class="k">except</span><span class="p">:</span>
+		<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 			<span class="k">return</span> <span class="kc">False</span>
 		<span class="k">if</span> <span class="n">cpass</span><span class="p">:</span>
 			<span class="k">if</span> <span class="n">cpass</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span> <span class="ow">or</span> <span class="n">cpass</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
 				<span class="k">try</span><span class="p">:</span>
 					<span class="n">cpass</span> <span class="o">=</span> <span class="n">getspnam</span><span class="p">(</span><span class="n">user</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-				<span class="k">except</span><span class="p">:</span>
+				<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 					<span class="k">return</span> <span class="kc">False</span>
 			<span class="k">return</span> <span class="n">crypt</span><span class="p">(</span><span class="n">passwd</span><span class="p">,</span> <span class="n">cpass</span><span class="p">)</span> <span class="o">==</span> <span class="n">cpass</span>
 		<span class="k">return</span> <span class="kc">False</span>
@@ -650,12 +649,12 @@
 		<span class="kn">from</span> <span class="nn">Plugins.Extensions.Bonjour.Bonjour</span> <span class="kn">import</span> <span class="n">bonjour</span>
 		<span class="n">service</span> <span class="o">=</span> <span class="n">bonjour</span><span class="o">.</span><span class="n">buildService</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="s1">&#39;OpenWebif&#39;</span><span class="p">)</span>
 		<span class="n">bonjour</span><span class="o">.</span><span class="n">registerService</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-	<span class="k">except</span><span class="p">:</span> <span class="c1"># nosec</span>
+	<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 		<span class="k">pass</span>
 	<span class="k">try</span><span class="p">:</span>
 		<span class="n">servicetype</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">protocol</span> <span class="o">+</span> <span class="s1">&#39;._tcp&#39;</span>
 		<span class="n">enigma</span><span class="o">.</span><span class="n">e2avahi_announce</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">servicetype</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
-	<span class="k">except</span><span class="p">:</span> <span class="c1"># nosec</span>
+	<span class="k">except</span><span class="p">:</span>  <span class="c1"># nosec # noqa: E722</span>
 		<span class="k">pass</span>
 </pre></div>
 

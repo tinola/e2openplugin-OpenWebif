@@ -80,8 +80,8 @@ pre {
         <div class="metrics-title">
             Metrics:<br>
         </div>
-        Total lines of code: <span id="loc">43159</span><br>
-        Total lines skipped (#nosec): <span id="nosec">84</span>
+        Total lines of code: <span id="loc">43185</span><br>
+        Total lines skipped (#nosec): <span id="nosec">94</span>
     </div>
 </div>
 
@@ -365,90 +365,6 @@ pre {
 </div>
 
 <div id="issue-13">
-<div class="issue-block issue-sev-high">
-    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
-    <b>Test ID:</b> B605<br>
-    <b>Severity: </b>HIGH<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/info.py" target="_blank">plugin/controllers/models/info.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html</a><br>
-
-<div class="code">
-<pre>
-109				try:
-110					speed = os.popen('iwconfig ' + iface + ' | grep "Bit Rate"').read().split(':')[1].split(' ')[0]
-111				except:
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-14">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/info.py" target="_blank">plugin/controllers/models/info.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-110					speed = os.popen('iwconfig ' + iface + ' | grep "Bit Rate"').read().split(':')[1].split(' ')[0]
-111				except:
-112					pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-15">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/info.py" target="_blank">plugin/controllers/models/info.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-123			nic = str(nic)
-124		except:  # noqa: E722
-125			pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-16">
-<div class="issue-block issue-sev-low">
-    <b>try_except_pass: </b> Try, Except, Pass detected.<br>
-    <b>Test ID:</b> B110<br>
-    <b>Severity: </b>LOW<br>
-    <b>Confidence: </b>HIGH<br>
-    <b>File: </b><a href="plugin/controllers/models/info.py" target="_blank">plugin/controllers/models/info.py</a> <br>
-    <b>More info: </b><a href="https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html" target="_blank">https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html</a><br>
-
-<div class="code">
-<pre>
-490										ipaddress = list(tmpaddress)[0][4][0]
-491							except:  # noqa: E722
-492								pass
-</pre>
-</div>
-
-
-</div>
-</div>
-
-<div id="issue-17">
 <div class="issue-block issue-sev-medium">
     <b>blacklist: </b> Use of insecure MD2, MD4, MD5, or SHA1 hash function.<br>
     <b>Test ID:</b> B303<br>
@@ -469,7 +385,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-18">
+<div id="issue-14">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -490,7 +406,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-19">
+<div id="issue-15">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -511,7 +427,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-20">
+<div id="issue-16">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -532,7 +448,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-21">
+<div id="issue-17">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -553,7 +469,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-22">
+<div id="issue-18">
 <div class="issue-block issue-sev-medium">
     <b>hardcoded_bind_all_interfaces: </b> Possible binding to all interfaces.<br>
     <b>Test ID:</b> B104<br>
@@ -574,7 +490,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-23">
+<div id="issue-19">
 <div class="issue-block issue-sev-medium">
     <b>hardcoded_bind_all_interfaces: </b> Possible binding to all interfaces.<br>
     <b>Test ID:</b> B104<br>
@@ -595,7 +511,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-24">
+<div id="issue-20">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -616,7 +532,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-25">
+<div id="issue-21">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>
@@ -637,7 +553,7 @@ pre {
 </div>
 </div>
 
-<div id="issue-26">
+<div id="issue-22">
 <div class="issue-block issue-sev-low">
     <b>try_except_pass: </b> Try, Except, Pass detected.<br>
     <b>Test ID:</b> B110<br>

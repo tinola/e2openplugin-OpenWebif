@@ -37,12 +37,11 @@ plugin/controllers/web.py:58:18: W605 invalid escape sequence '\:'
 plugin/controllers/web.py:58:21: W605 invalid escape sequence '\d'
 plugin/controllers/web.py:2363:1: E402 module level import not at top of file
 plugin/controllers/models/info.py:442:30: W605 invalid escape sequence '\ '
-plugin/controllers/models/info.py:580:1: W293 blank line contains whitespace
 plugin/controllers/models/info.py:617:22: F841 local variable 'error' is assigned to but never used
 plugin/controllers/models/info.py:618:1: E115 expected an indented block (comment)
 plugin/controllers/models/info.py:631:17: E261 at least two spaces before inline comment
-plugin/controllers/models/info.py:822:22: F841 local variable 'error' is assigned to but never used
-plugin/controllers/models/info.py:823:1: E115 expected an indented block (comment)
+plugin/controllers/models/info.py:823:22: F841 local variable 'error' is assigned to but never used
+plugin/controllers/models/info.py:824:1: E115 expected an indented block (comment)
 plugin/controllers/models/mediaplayer.py:192:22: W605 invalid escape sequence '\.'
 plugin/controllers/models/mediaplayer.py:196:22: W605 invalid escape sequence '\.'
 plugin/controllers/models/mediaplayer.py:200:22: W605 invalid escape sequence '\.'
